@@ -139,11 +139,11 @@ namespace FastFoodRestaurantMenu
                    "All Day Brekkies" + "\n" 
                    "----------------", "Back");
 
-               allDayBrekkiesMenu.addItem("Mzansi Brekkie");
-               allDayBrekkiesMenu.addItem("Early Bird");
-               allDayBrekkiesMenu.addItem("Streaky Breakfast");
-               allDayBrekkiesMenu.addItem("Omelette");
-               allDayBrekkiesMenu.addItem("Avo On Toast");
+                allDayBrekkiesMenu.addItem("Mzansi Brekkie");
+                allDayBrekkiesMenu.addItem("Early Bird");
+                allDayBrekkiesMenu.addItem("Streaky Breakfast");
+                allDayBrekkiesMenu.addItem("Omelette");
+                allDayBrekkiesMenu.addItem("Avo On Toast");
                 return allDayBrekkiesMenu;
             }
         }
