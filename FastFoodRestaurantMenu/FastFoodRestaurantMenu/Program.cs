@@ -132,21 +132,21 @@ namespace FastFoodRestaurantMenu
             }
         }
 
-        //static Menu createAllDayBrekkiesMenu()//this allows us to use this  
-        //{                                     //menu in a switch statement
-        //    {
-        //        Menu allDayBrekkiesMenu = new Menu(
-        //            "All Day Brekkies" + "\n" +
-        //            "----------------", "Back");
+        static Menu createAllDayBrekkiesMenu()//this allows us to use this  
+        {                                     //menu in a switch statement
+            {
+               Menu allDayBrekkiesMenu = new Menu(
+                   "All Day Brekkies" + "\n" 
+                   "----------------", "Back");
 
-        //        allDayBrekkiesMenu.addItem("Mzansi Brekkie");
-        //        allDayBrekkiesMenu.addItem("Early Bird");
-        //        allDayBrekkiesMenu.addItem("Streaky Breakfast");
-        //        allDayBrekkiesMenu.addItem("Omelette");
-        //        allDayBrekkiesMenu.addItem("Avo On Toast");
-        //        return allDayBrekkiesMenu;
-        //    }
-        //}
+               allDayBrekkiesMenu.addItem("Mzansi Brekkie");
+               allDayBrekkiesMenu.addItem("Early Bird");
+               allDayBrekkiesMenu.addItem("Streaky Breakfast");
+               allDayBrekkiesMenu.addItem("Omelette");
+               allDayBrekkiesMenu.addItem("Avo On Toast");
+                return allDayBrekkiesMenu;
+            }
+        }
         static bool addAlldayBrekiesItemToCart(int choise)
         {
             bool OrderAgain = true;
