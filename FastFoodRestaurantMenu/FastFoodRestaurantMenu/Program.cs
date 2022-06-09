@@ -171,4 +171,155 @@ namespace FastFoodRestaurantMenu
     }
 }
 
+//        switch ((ToastedSandwichesMenu)choise)
+//        {
+//            case ToastedSandwichesMenu.Cheese:
+//                cart.Add(new Product("Cheese", 34.90));
+//                createBreakfastMenu();
+//                break;
 
+//            case ToastedSandwichesMenu.CheeseAndTomato:
+//                cart.Add(new Product("Cheese And Tomato", 42.90));
+//                createBreakfastMenu();
+//                break;
+
+//            case ToastedSandwichesMenu.ChickenMayo:
+//                cart.Add(new Product("Chicken Mayo", 49.90));
+//                createBreakfastMenu();
+//                break;
+
+//            case ToastedSandwichesMenu.BaconAndEgg:
+//                cart.Add(new Product("Bacon And Egg", 59.90));
+//                createBreakfastMenu();
+//                break;
+
+//            case ToastedSandwichesMenu.Dagwood:
+//                cart.Add(new Product("Dagwood", 64.90));
+//                createBreakfastMenu();
+//                break;
+
+
+//        switch ((BurgerMenu)choise)
+//        {
+//            case BurgerMenu.Wimpy:
+//                cart.Add(new Product("Wimpy", 59.90));
+//                createLunchMenu();
+//                break;
+
+//            case BurgerMenu.Cheese:
+//                cart.Add(new Product("Cheese", 69.90));
+//                createLunchMenu();
+//                break;
+
+//            case BurgerMenu.Chicken:
+//                cart.Add(new Product("Chicken", 69.90));
+//                createLunchMenu();
+//                break;
+
+//            case BurgerMenu.Champion:
+//                cart.Add(new Product("Champion", 89.90));
+//                createLunchMenu();
+//                break;
+
+//        }
+
+
+//        switch ((FamousGrillsMenu)choise)
+//        {
+//            case FamousGrillsMenu.ChickenAndChips:
+//                cart.Add(new Product("Chicken And Chips", 56.90));
+//                createLunchMenu();
+//                break;
+
+//            case FamousGrillsMenu.GrilledChickenFillets:
+//                cart.Add(new Product("Grilled Chicken Fillets", 74.90));
+//                createLunchMenu();
+//                break;
+
+//            case FamousGrillsMenu.ThrillOfTheGrill:
+//                cart.Add(new Product("Thrill Of The Grill", 79.90));
+//                createLunchMenu();
+//                break;
+
+//            case FamousGrillsMenu.ChickenWings:
+//                cart.Add(new Product("Chicken Wings", 109.90));
+//                createLunchMenu();
+//                break;
+
+//        }
+
+
+
+//        switch ((FrozenLemonadesMenu)choise)
+//        {
+//            case FrozenLemonadesMenu.PassionFruit:
+//                cart.Add(new Product("Passion Fruit Lemonade", 39.90));
+//                createDrinksMenu();
+//                break;
+
+//            case FrozenLemonadesMenu.PassionFruitJug:
+//                cart.Add(new Product("Passion Fruit Lemonade Jug", 94.90));
+//                createDrinksMenu();
+//                break;
+
+//            case FrozenLemonadesMenu.Naartjie:
+//                cart.Add(new Product("Naartjie Lemonade", 39.90));
+//                createDrinksMenu();
+//                break;
+
+//            case FrozenLemonadesMenu.NaartjieJug:
+//                cart.Add(new Product("Naartjie Lemonade Jug", 94.90));
+//                createDrinksMenu();
+//                break;
+
+//        }
+
+
+//        switch ((MilkshakeMenu)choise)
+//        {
+//            case MilkshakeMenu.Classic:
+//                cart.Add(new Product("Classic", 39.90));
+//                createDrinksMenu();
+//                break;
+
+//            case MilkshakeMenu.BarOne:
+//                cart.Add(new Product("Bar One", 49.90));
+//                createDrinksMenu();
+//                break;
+
+//            case MilkshakeMenu.MilkTart:
+//                cart.Add(new Product("Milk Tart", 49.90));
+//                createDrinksMenu();
+//                break;
+
+//            case MilkshakeMenu.ToffeMocha:
+//                cart.Add(new Product("Toffe Mocha", 49.90));
+//                createDrinksMenu();
+//                break;
+
+//        }
+
+
+//        switch ((HotDrinksMenu)choise)
+//        {
+//            case HotDrinksMenu.Cappachino:
+//                cart.Add(new Product("Cappachino", 34.90));
+//                createDrinksMenu();
+//                break;
+
+//            case HotDrinksMenu.HotChocolate:
+//                cart.Add(new Product("Hot Chocolate", 42.90));
+//                createDrinksMenu();
+//                break;
+
+//            case HotDrinksMenu.Coffee:
+//                cart.Add(new Product("Coffee", 24.90));
+//                createDrinksMenu();
+//                break;
+
+//            case HotDrinksMenu.Tea:
+//                cart.Add(new Product("Tea", 21.90));
+//                createDrinksMenu();
+//                break;
+
+//        }
