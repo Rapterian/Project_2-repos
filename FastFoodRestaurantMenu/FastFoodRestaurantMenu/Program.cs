@@ -80,8 +80,10 @@ namespace FastFoodRestaurantMenu
                         case BreakfastMenu.AllDayBrekkies:
                             Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
                             allDayBrekkiesMenu.displayMenu();
-                            choise = allDayBrekkiesMenu.getReply() - 1;
-                            addAlldayBrekiesItemToCart(choise);
+                            do
+                            {
+                                choise = allDayBrekkiesMenu.getReply() - 1;
+                            } while (addAlldayBrekiesItemToCart(choise));
                             break;
 
                         case BreakfastMenu.ToastedSandwiches:
@@ -114,7 +116,7 @@ namespace FastFoodRestaurantMenu
                 Menu breakfastMenu = new Menu(
                     "---------" + "\n" +
                     "Breakfast" + "\n" +
-                    "---------");
+                    "---------", "Back");
 
                 breakfastMenu.addItem("All Day Brekkies");
                 breakfastMenu.addItem("Toasted Sandwiches");
@@ -122,23 +124,25 @@ namespace FastFoodRestaurantMenu
             }
         }
 
+        //MzansiBrekkie, EarlyBird, StreakyBreakfast, Omelette, AvoOnToast
         static Menu createAllDayBrekkiesMenu()//this allows us to use this  
         {                                     //menu in a switch statement
             {
                 Menu allDayBrekkiesMenu = new Menu(
                     "All Day Brekkies" + "\n" +
-                    "----------------");
+                    "----------------", "Back");
 
-                allDayBrekkiesMenu.addItem("Omelette");
                 allDayBrekkiesMenu.addItem("Mzansi Brekkie");
                 allDayBrekkiesMenu.addItem("Early Bird");
                 allDayBrekkiesMenu.addItem("Streaky Breakfast");
+                allDayBrekkiesMenu.addItem("Omelette");
                 allDayBrekkiesMenu.addItem("Avo On Toast");
                 return allDayBrekkiesMenu;
             }
         }
-        static void addAlldayBrekiesItemToCart(int choise)
+        static bool addAlldayBrekiesItemToCart(int choise)
         {
+            bool OrderAgain = true;
             switch ((AllDayBrekkiesMenu)choise)
             {
                 case AllDayBrekkiesMenu.Omelette:
@@ -165,7 +169,12 @@ namespace FastFoodRestaurantMenu
                     cart.Add(new Product("Avo On Toast", 64.90));
                     Console.WriteLine("Avo On Toast added to order");
                     break;
+
+                default:
+                    OrderAgain = false;
+                    break;
             }
+            return OrderAgain;
         }
 
     }
