@@ -67,9 +67,9 @@ namespace FastFoodRestaurantMenu
             {
                 mainMenu.displayMenu();
                 choise = mainMenu.getReply() - 1;//the reply should be reduced
-                                                     //since enums are zero based 
-                                                     //and the list the user sees 
-                                                     //starts with 1
+                                                 //since enums are zero based 
+                                                 //and the list the user sees 
+                                                 //starts with 1
 
                 switch ((MainMenu)choise)//Using the enums in a switch statement
                 {
@@ -90,9 +90,73 @@ namespace FastFoodRestaurantMenu
                                 break;
 
                             case BreakfastMenu.ToastedSandwiches:
-
+                                Menu toastedSandwichesMenu = createToastedSandwichesMenu();
+                                toastedSandwichesMenu.displayMenu();
+                                do
+                                {
+                                    choise = toastedSandwichesMenu.getReply() - 1;
+                                } while (addToastedSandwichesItemToCart(choise));
                                 break;
                         }
+
+                        break;
+
+                    case MainMenu.Lunch:
+
+                        //switch ((LunchMenu)choise)
+                        //{
+                        //    case LunchMenu.Burgers:
+                        //        Menu burgerMenu = createBurgerMenu();
+                        //        burgerMenu.displayMenu();
+                        //        do
+                        //        {
+                        //            choise = burgerMenu.getReply() - 1;
+                        //        } while (addBurgerItemToCart(choise));
+                        //        break;
+
+                        //    case LunchMenu.FamousGrills:
+                        //        Menu famousGrillsMenu = createFamousGrillsMenu();
+                        //        famousGrillsMenu.displayMenu();
+                        //        do
+                        //        {
+                        //            choise = famousGrillsMenu.getReply() - 1;
+                        //        } while (addFamousGrillsItemToCart(choise));
+                        //        break;
+                        //}
+
+                        break;
+
+                    case MainMenu.Drinks:
+
+                        //switch ((DrinksMenu)choise)
+                        //{
+                        //    case DrinksMenu.FrozenLemonades:
+                        //        Menu frozenLemonades = createFrozenLemonadesMenu();
+                        //        frozenLemonades.displayMenu();
+                        //        do
+                        //        {
+                        //            choise = frozenLemonades.getReply() - 1;
+                        //        } while (addFrozenLemonadesItemToCart(choise));
+                        //        break;
+
+                        //    case DrinksMenu.Milkshake:
+                        //        Menu milkshakeMenu = createMilkshakeMenu();
+                        //        milkshakeMenu.displayMenu();
+                        //        do
+                        //        {
+                        //            choise = milkshakeMenu.getReply() - 1;
+                        //        } while (addMilkshakeItemToCart(choise));
+                        //        break;
+
+                        //    case DrinksMenu.HotDrinks:
+                        //        Menu hotDrinksMenu = createHotDrinksMenu();
+                        //        hotDrinksMenu.displayMenu();
+                        //        do
+                        //        {
+                        //            choise = hotDrinksMenu.getReply() - 1;
+                        //        } while (addHotDrinksItemToCart(choise));
+                        //        break;
+                        //}
 
                         break;
 
@@ -100,7 +164,7 @@ namespace FastFoodRestaurantMenu
                         checkOut();
                         break;
                 }
-            }while (choise!=4);
+            } while (choise != 4);
 
         }
 
@@ -135,9 +199,11 @@ namespace FastFoodRestaurantMenu
         static Menu createAllDayBrekkiesMenu()//this allows us to use this  
         {                                     //menu in a switch statement
             {
-               Menu allDayBrekkiesMenu = new Menu(
-                   "All Day Brekkies" + "\n" 
-                   "----------------", "Back");
+                Menu allDayBrekkiesMenu = new Menu(
+                    "All Day Brekkies" + "\n" +
+
+
+                    "----------------", "Back");
 
                 allDayBrekkiesMenu.addItem("Mzansi Brekkie");
                 allDayBrekkiesMenu.addItem("Early Bird");
@@ -184,17 +250,18 @@ namespace FastFoodRestaurantMenu
             return OrderAgain;
         }
 
-      //  enum ToastedSandwichesMenu
-    //    {
-  //          Cheese, CheeseAndTomato, ChickenMayo, BaconAndEgg, Dagwood
-//        }
+        //  enum ToastedSandwichesMenu
+        //  {
+        //      Cheese, CheeseAndTomato, ChickenMayo, BaconAndEgg, Dagwood
+        //  }
 
-         static Menu createToastedSandwichesMenu()//this allows us to use this  
-        {                                     //menu in a switch statement
+        static Menu createToastedSandwichesMenu()//this allows us to use this  
+        {                                        //menu in a switch statement
             {
-               Menu toastedSandwichesMenu = new Menu(
-                   "Toasted Sandwiches" + "\n" 
-                   "------------------", "Back");
+                Menu toastedSandwichesMenu = new Menu(
+                    "Toasted Sandwiches" + "\n" +
+
+                    "------------------", "Back");
 
                 toastedSandwichesMenu.addItem("Cheese");
                 toastedSandwichesMenu.addItem("Cheese And Tomato");
@@ -204,48 +271,54 @@ namespace FastFoodRestaurantMenu
                 return toastedSandwichesMenu;
             }
         }
-        static bool addToastedSandwichesMenu(int choise)
+        static bool addToastedSandwichesItemToCart(int choise)
         {
             bool OrderAgain = true;
-                    switch ((ToastedSandwichesMenu)choise)
-        {
-            case ToastedSandwichesMenu.Cheese:
-                cart.Add(new Product("Cheese", 34.90));
-                createBreakfastMenu();
-                break;
-            case ToastedSandwichesMenu.CheeseAndTomato:
-                cart.Add(new Product("Cheese And Tomato", 42.90));
-                createBreakfastMenu();
-                break;
-            case ToastedSandwichesMenu.ChickenMayo:
-                cart.Add(new Product("Chicken Mayo", 49.90));
-                createBreakfastMenu();
-                break;
-            case ToastedSandwichesMenu.BaconAndEgg:
-                cart.Add(new Product("Bacon And Egg", 59.90));
-                createBreakfastMenu();
-                break;
-            case ToastedSandwichesMenu.Dagwood:
-                cart.Add(new Product("Dagwood", 64.90));
-                createBreakfastMenu();
-                break;
+            switch ((ToastedSandwichesMenu)choise)
+            {
+                case ToastedSandwichesMenu.Cheese:
+                    cart.Add(new Product("Cheese", 34.90));
+                    createBreakfastMenu();
+                    break;
+                case ToastedSandwichesMenu.CheeseAndTomato:
+                    cart.Add(new Product("Cheese And Tomato", 42.90));
+                    createBreakfastMenu();
+                    break;
+                case ToastedSandwichesMenu.ChickenMayo:
+                    cart.Add(new Product("Chicken Mayo", 49.90));
+                    createBreakfastMenu();
+                    break;
+                case ToastedSandwichesMenu.BaconAndEgg:
+                    cart.Add(new Product("Bacon And Egg", 59.90));
+                    createBreakfastMenu();
+                    break;
+                case ToastedSandwichesMenu.Dagwood:
+                    cart.Add(new Product("Dagwood", 64.90));
+                    createBreakfastMenu();
+                    break;
+                default:
+                    OrderAgain = false;
+                    break;
+
+            }
             return OrderAgain;
         }
+
 
 
         static void checkOut()
         {
             Console.WriteLine("------Your order:------");
             double sum = 0;
-            foreach(Product product in cart)
+            foreach (Product product in cart)
             {
                 Console.WriteLine(product.productName + "\tR" + product.productPrice);
-                sum+=product.productPrice;
+                sum += product.productPrice;
             }
             Console.WriteLine(
-                "+++++++++++++++++++++++++" +"\n" +
-                "Your Total Amount R{0}" +"\n" +
-                "+++++++++++++++++++++++++",Math.Round(sum,2));
+                "+++++++++++++++++++++++++" + "\n" +
+                "Your Total Amount R{0}" + "\n" +
+                "+++++++++++++++++++++++++", Math.Round(sum, 2));
             cart.Clear();
         }
     }

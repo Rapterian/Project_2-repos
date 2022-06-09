@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dekoc\\Source\\Repos\\Project_2-repos\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj": {}
+    "D:\\Documents\\Belgium\\PRG 2\\projects\\Project_2 Group 7\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dekoc\\Source\\Repos\\Project_2-repos\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj": {
+    "D:\\Documents\\Belgium\\PRG 2\\projects\\Project_2 Group 7\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dekoc\\Source\\Repos\\Project_2-repos\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj",
+        "projectUniqueName": "D:\\Documents\\Belgium\\PRG 2\\projects\\Project_2 Group 7\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj",
         "projectName": "FastFoodRestaurantMenu",
-        "projectPath": "C:\\Users\\dekoc\\Source\\Repos\\Project_2-repos\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj",
+        "projectPath": "D:\\Documents\\Belgium\\PRG 2\\projects\\Project_2 Group 7\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu.csproj",
         "packagesPath": "C:\\Users\\dekoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dekoc\\Source\\Repos\\Project_2-repos\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\obj\\",
+        "outputPath": "D:\\Documents\\Belgium\\PRG 2\\projects\\Project_2 Group 7\\FastFoodRestaurantMenu\\FastFoodRestaurantMenu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dekoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
