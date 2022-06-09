@@ -61,7 +61,7 @@ namespace FastFoodRestaurantMenu
         static List<Product> cart = new List<Product>();
         static void Main(string[] args)
         {
-            Menu mainMenu = createMainMenu();            
+            Menu mainMenu = createMainMenu();
             mainMenu.displayMenu();
             int choise = mainMenu.getReply() - 1;//the reply should be reduced
                                                  //since enums are zero based 
@@ -81,7 +81,7 @@ namespace FastFoodRestaurantMenu
                             Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
                             allDayBrekkiesMenu.displayMenu();
                             choise = allDayBrekkiesMenu.getReply() - 1;
-
+                            addAlldayBrekiesItemToCart(choise);
                             break;
 
                         case BreakfastMenu.ToastedSandwiches:
@@ -122,19 +122,53 @@ namespace FastFoodRestaurantMenu
             }
         }
 
-        static Menu createAllDayBrekkiesMenu()
-        {
-            Menu allDayBrekkiesMenu = new Menu(
-                "All Day Brekkies" + "\n" +
-                "----------------");
+        static Menu createAllDayBrekkiesMenu()//this allows us to use this  
+        {                                     //menu in a switch statement
+            {
+                Menu allDayBrekkiesMenu = new Menu(
+                    "All Day Brekkies" + "\n" +
+                    "----------------");
 
-            allDayBrekkiesMenu.addItem("Omelette");
-            allDayBrekkiesMenu.addItem("Mzansi Brekkie");
-            allDayBrekkiesMenu.addItem("Early Bird");
-            allDayBrekkiesMenu.addItem("Streaky Breakfast");
-            allDayBrekkiesMenu.addItem("Avo On Toast");
-            return allDayBrekkiesMenu;
+                allDayBrekkiesMenu.addItem("Omelette");
+                allDayBrekkiesMenu.addItem("Mzansi Brekkie");
+                allDayBrekkiesMenu.addItem("Early Bird");
+                allDayBrekkiesMenu.addItem("Streaky Breakfast");
+                allDayBrekkiesMenu.addItem("Avo On Toast");
+                return allDayBrekkiesMenu;
+            }
+        }
+        static void addAlldayBrekiesItemToCart(int choise)
+        {
+            switch ((AllDayBrekkiesMenu)choise)
+            {
+                case AllDayBrekkiesMenu.Omelette:
+                    cart.Add(new Product("Omelette", 59.90));
+                    Console.WriteLine("Omelette added to order");
+                    break;
+
+                case AllDayBrekkiesMenu.MzansiBrekkie:
+                    cart.Add(new Product("Mzansi Brekkie", 34.90));
+                    Console.WriteLine("Mzansi Brekkie added to order");
+                    break;
+
+                case AllDayBrekkiesMenu.EarlyBird:
+                    cart.Add(new Product("Early Bird", 42.90));
+                    Console.WriteLine("Early Bird added to order");
+                    break;
+
+                case AllDayBrekkiesMenu.StreakyBreakfast:
+                    cart.Add(new Product("Streaky Breakfast", 49.90));
+                    Console.WriteLine("Streaky Breakfast added to order");
+                    break;
+
+                case AllDayBrekkiesMenu.AvoOnToast:
+                    cart.Add(new Product("Avo On Toast", 64.90));
+                    Console.WriteLine("Avo On Toast added to order");
+                    break;
+            }
         }
 
     }
 }
+
+
