@@ -62,37 +62,45 @@ namespace FastFoodRestaurantMenu
         static void Main(string[] args)
         {
             Menu mainMenu = createMainMenu();
-            mainMenu.displayMenu();
-            int choise = mainMenu.getReply() - 1;//the reply should be reduced
-                                                 //since enums are zero based 
-                                                 //and the list the user sees 
-                                                 //starts with 1
-
-            switch ((MainMenu)choise)//Using the enums in a switch statement
+            int choise;
+            do
             {
-                case MainMenu.Breakfast:
-                    Menu breakfastMenu = createBreakfastMenu();
-                    breakfastMenu.displayMenu();
-                    choise = breakfastMenu.getReply() - 1;
+                mainMenu.displayMenu();
+                choise = mainMenu.getReply() - 1;//the reply should be reduced
+                                                     //since enums are zero based 
+                                                     //and the list the user sees 
+                                                     //starts with 1
 
-                    switch ((BreakfastMenu)choise)
-                    {
-                        case BreakfastMenu.AllDayBrekkies:
-                            Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
-                            allDayBrekkiesMenu.displayMenu();
-                            do
-                            {
-                                choise = allDayBrekkiesMenu.getReply() - 1;
-                            } while (addAlldayBrekiesItemToCart(choise));
-                            break;
+                switch ((MainMenu)choise)//Using the enums in a switch statement
+                {
+                    case MainMenu.Breakfast:
+                        Menu breakfastMenu = createBreakfastMenu();
+                        breakfastMenu.displayMenu();
+                        choise = breakfastMenu.getReply() - 1;
 
-                        case BreakfastMenu.ToastedSandwiches:
+                        switch ((BreakfastMenu)choise)
+                        {
+                            case BreakfastMenu.AllDayBrekkies:
+                                Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
+                                allDayBrekkiesMenu.displayMenu();
+                                do
+                                {
+                                    choise = allDayBrekkiesMenu.getReply() - 1;
+                                } while (addAlldayBrekiesItemToCart(choise));
+                                break;
 
-                            break;
-                    }
+                            case BreakfastMenu.ToastedSandwiches:
 
-                    break;
-            }
+                                break;
+                        }
+
+                        break;
+
+                    case MainMenu.CheckOut:
+                        checkOut();
+                        break;
+                }
+            }while (choise!=4);
 
         }
 
@@ -124,7 +132,6 @@ namespace FastFoodRestaurantMenu
             }
         }
 
-        //MzansiBrekkie, EarlyBird, StreakyBreakfast, Omelette, AvoOnToast
         static Menu createAllDayBrekkiesMenu()//this allows us to use this  
         {                                     //menu in a switch statement
             {
@@ -177,7 +184,25 @@ namespace FastFoodRestaurantMenu
             return OrderAgain;
         }
 
+
+        static void checkOut()
+        {
+            Console.WriteLine("------Your order:------");
+            double sum = 0;
+            foreach(Product product in cart)
+            {
+                Console.WriteLine(product.productName + "\tR" + product.productPrice);
+                sum+=product.productPrice;
+            }
+            Console.WriteLine(
+                "+++++++++++++++++++++++++" +"\n" +
+                "Your Total Amount R{0}" +"\n" +
+                "+++++++++++++++++++++++++",Math.Round(sum,2));
+            cart.Clear();
+        }
     }
+
+
 }
 
 //        switch ((ToastedSandwichesMenu)choise)

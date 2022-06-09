@@ -57,7 +57,7 @@ namespace FastFoodRestaurantMenu
         {
             while (!int.TryParse(input, out int result))//keep asking for a numbe untill 
             {                                           //one is given
-                Console.WriteLine("\n{0} is not a number, please enter a valid number.", input);
+                Console.Write("\n{0} is not a number, please enter a valid number.", input);
                 input = Console.ReadLine();
             }
             int num = int.Parse(input);
@@ -76,7 +76,7 @@ namespace FastFoodRestaurantMenu
             int num = checkInt(input);
             while (!checkParameters(min, max, num))//keep asking the user for a number on the list
             {                                      //untill one is given
-                Console.WriteLine("{0} is not on the list of numbers to choose from, please try again", num);
+                Console.Write("{0} is not on the list of numbers to choose from, please try again", num);
                 input = Console.ReadLine();
                 num = int.Parse(input);
             }
