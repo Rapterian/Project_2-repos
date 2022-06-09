@@ -62,8 +62,18 @@ namespace FastFoodRestaurantMenu
         static void Main(string[] args)
         {
             Menu mainMenu=createMainMenu();
+            Menu breakfastMenu = createBreakfastMenu();
+            mainMenu.displayMenu();
+            int choise = mainMenu.getReply() - 1;
 
-            
+            switch ((MainMenu)choise)
+            {
+                case MainMenu.Breakfast:
+                    breakfastMenu.displayMenu();
+                    choise = breakfastMenu.getReply() - 1;
+                    break;
+            }
+
         }
 
         static Menu createMainMenu()//this allows us to use this  
