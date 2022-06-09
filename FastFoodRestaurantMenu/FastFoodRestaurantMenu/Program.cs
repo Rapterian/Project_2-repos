@@ -61,16 +61,34 @@ namespace FastFoodRestaurantMenu
         static List<Product> cart = new List<Product>();
         static void Main(string[] args)
         {
-            Menu mainMenu=createMainMenu();
-            Menu breakfastMenu = createBreakfastMenu();
+            Menu mainMenu = createMainMenu();            
             mainMenu.displayMenu();
-            int choise = mainMenu.getReply() - 1;
+            int choise = mainMenu.getReply() - 1;//the reply should be reduced
+                                                 //since enums are zero based 
+                                                 //and the list the user sees 
+                                                 //starts with 1
 
-            switch ((MainMenu)choise)
+            switch ((MainMenu)choise)//Using the enums in a switch statement
             {
                 case MainMenu.Breakfast:
+                    Menu breakfastMenu = createBreakfastMenu();
                     breakfastMenu.displayMenu();
                     choise = breakfastMenu.getReply() - 1;
+
+                    switch ((BreakfastMenu)choise)
+                    {
+                        case BreakfastMenu.AllDayBrekkies:
+                            Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
+                            allDayBrekkiesMenu.displayMenu();
+                            choise = allDayBrekkiesMenu.getReply() - 1;
+
+                            break;
+
+                        case BreakfastMenu.ToastedSandwiches:
+
+                            break;
+                    }
+
                     break;
             }
 
@@ -93,14 +111,30 @@ namespace FastFoodRestaurantMenu
         static Menu createBreakfastMenu()//this allows us to use this  
         {                                //menu in a switch statement
             {
-            Menu breakfastMenu = new Menu(
-                "---------" + "\n" +
-                "Breakfast" + "\n" +
-                "---------");
+                Menu breakfastMenu = new Menu(
+                    "---------" + "\n" +
+                    "Breakfast" + "\n" +
+                    "---------");
 
-            breakfastMenu.addItem("All Day Brekkies");
-            breakfastMenu.addItem("Toasted Sandwiches");
-            return breakfastMenu;
+                breakfastMenu.addItem("All Day Brekkies");
+                breakfastMenu.addItem("Toasted Sandwiches");
+                return breakfastMenu;
+            }
         }
+
+        static Menu createAllDayBrekkiesMenu()
+        {
+            Menu allDayBrekkiesMenu = new Menu(
+                "All Day Brekkies" + "\n" +
+                "----------------");
+
+            allDayBrekkiesMenu.addItem("Omelette");
+            allDayBrekkiesMenu.addItem("Mzansi Brekkie");
+            allDayBrekkiesMenu.addItem("Early Bird");
+            allDayBrekkiesMenu.addItem("Streaky Breakfast");
+            allDayBrekkiesMenu.addItem("Avo On Toast");
+            return allDayBrekkiesMenu;
+        }
+
     }
 }
