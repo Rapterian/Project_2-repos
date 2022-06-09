@@ -184,6 +184,54 @@ namespace FastFoodRestaurantMenu
             return OrderAgain;
         }
 
+      //  enum ToastedSandwichesMenu
+    //    {
+  //          Cheese, CheeseAndTomato, ChickenMayo, BaconAndEgg, Dagwood
+//        }
+
+         static Menu createToastedSandwichesMenu()//this allows us to use this  
+        {                                     //menu in a switch statement
+            {
+               Menu toastedSandwichesMenu = new Menu(
+                   "Toasted Sandwiches" + "\n" 
+                   "------------------", "Back");
+
+                toastedSandwichesMenu.addItem("Cheese");
+                toastedSandwichesMenu.addItem("Cheese And Tomato");
+                toastedSandwichesMenu.addItem("Chicken Mayo");
+                toastedSandwichesMenu.addItem("Bacon And Egg");
+                toastedSandwichesMenu.addItem("Dagwood");
+                return toastedSandwichesMenu;
+            }
+        }
+        static bool addToastedSandwichesMenu(int choise)
+        {
+            bool OrderAgain = true;
+                    switch ((ToastedSandwichesMenu)choise)
+        {
+            case ToastedSandwichesMenu.Cheese:
+                cart.Add(new Product("Cheese", 34.90));
+                createBreakfastMenu();
+                break;
+            case ToastedSandwichesMenu.CheeseAndTomato:
+                cart.Add(new Product("Cheese And Tomato", 42.90));
+                createBreakfastMenu();
+                break;
+            case ToastedSandwichesMenu.ChickenMayo:
+                cart.Add(new Product("Chicken Mayo", 49.90));
+                createBreakfastMenu();
+                break;
+            case ToastedSandwichesMenu.BaconAndEgg:
+                cart.Add(new Product("Bacon And Egg", 59.90));
+                createBreakfastMenu();
+                break;
+            case ToastedSandwichesMenu.Dagwood:
+                cart.Add(new Product("Dagwood", 64.90));
+                createBreakfastMenu();
+                break;
+            return OrderAgain;
+        }
+
 
         static void checkOut()
         {
@@ -205,32 +253,7 @@ namespace FastFoodRestaurantMenu
 
 }
 
-//        switch ((ToastedSandwichesMenu)choise)
-//        {
-//            case ToastedSandwichesMenu.Cheese:
-//                cart.Add(new Product("Cheese", 34.90));
-//                createBreakfastMenu();
-//                break;
 
-//            case ToastedSandwichesMenu.CheeseAndTomato:
-//                cart.Add(new Product("Cheese And Tomato", 42.90));
-//                createBreakfastMenu();
-//                break;
-
-//            case ToastedSandwichesMenu.ChickenMayo:
-//                cart.Add(new Product("Chicken Mayo", 49.90));
-//                createBreakfastMenu();
-//                break;
-
-//            case ToastedSandwichesMenu.BaconAndEgg:
-//                cart.Add(new Product("Bacon And Egg", 59.90));
-//                createBreakfastMenu();
-//                break;
-
-//            case ToastedSandwichesMenu.Dagwood:
-//                cart.Add(new Product("Dagwood", 64.90));
-//                createBreakfastMenu();
-//                break;
 
 
 //        switch ((BurgerMenu)choise)
