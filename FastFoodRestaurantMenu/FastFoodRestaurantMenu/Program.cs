@@ -61,7 +61,23 @@ namespace FastFoodRestaurantMenu
         static List<Product> cart = new List<Product>();
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu mainMenu=createMainMenu();
+
+            
+        }
+
+        static Menu createMainMenu()//this allows us to use this  
+        {                           //menu in a switch statement
+            Menu mainMenu = new Menu(
+                "==========" + "\n" +
+                "WIMPY MENU" + "\n" +
+                "==========");
+            mainMenu.addItem("Breakfast");
+            mainMenu.addItem("Lunch");
+            mainMenu.addItem("Drinks");
+            mainMenu.addItem("Check Out");
+            return mainMenu;
+
         }
     }
 }
