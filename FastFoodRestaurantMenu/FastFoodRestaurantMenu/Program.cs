@@ -77,8 +77,8 @@ namespace FastFoodRestaurantMenu
                         Menu breakfastMenu = createBreakfastMenu();
                         breakfastMenu.displayMenu();
                         choise = breakfastMenu.getReply() - 1;
-
-                        switch ((BreakfastMenu)choise)
+                          
+                        switch ((BreakfastMenu)choise)     
                         {
                             case BreakfastMenu.AllDayBrekkies:
                                 Menu allDayBrekkiesMenu = createAllDayBrekkiesMenu();
@@ -128,7 +128,7 @@ namespace FastFoodRestaurantMenu
 
                     case MainMenu.Drinks:
 
-                        //switch ((DrinksMenu)choise)
+                        //switch ((DrinksMenu)choise) 
                         //{
                         //    case DrinksMenu.FrozenLemonades:
                         //        Menu frozenLemonades = createFrozenLemonadesMenu();
@@ -213,9 +213,10 @@ namespace FastFoodRestaurantMenu
                 return allDayBrekkiesMenu;
             }
         }
-        static bool addAlldayBrekiesItemToCart(int choise)
-        {
-            bool OrderAgain = true;
+        static bool addAlldayBrekiesItemToCart(int choise)//having a cart list makes it easy to add items 
+        {                                                 //and store the amounts they costs
+
+            bool OrderAgain = true;  //the boolean value will allow a loop to be used in the switch statement               
             switch ((AllDayBrekkiesMenu)choise)
             {
                 case AllDayBrekkiesMenu.Omelette:
@@ -250,10 +251,6 @@ namespace FastFoodRestaurantMenu
             return OrderAgain;
         }
 
-        //  enum ToastedSandwichesMenu
-        //  {
-        //      Cheese, CheeseAndTomato, ChickenMayo, BaconAndEgg, Dagwood
-        //  }
 
         static Menu createToastedSandwichesMenu()//this allows us to use this  
         {                                        //menu in a switch statement
@@ -271,9 +268,10 @@ namespace FastFoodRestaurantMenu
                 return toastedSandwichesMenu;
             }
         }
-        static bool addToastedSandwichesItemToCart(int choise)
-        {
-            bool OrderAgain = true;
+        static bool addToastedSandwichesItemToCart(int choise)//having a cart list makes it easy to add items
+        {                                                     //and store the amounts they costs
+
+            bool OrderAgain = true;    //the boolean value will allow a loop to be used in the switch statement              
             switch ((ToastedSandwichesMenu)choise)
             {
                 case ToastedSandwichesMenu.Cheese:
@@ -310,13 +308,13 @@ namespace FastFoodRestaurantMenu
         {
             Console.WriteLine("------Your order:------");
             double sum = 0;
-            foreach (Product product in cart)
-            {
+            foreach (Product product in cart)//going throug the list and displaying each item
+            {                                //ass well as counting up the total
                 Console.WriteLine(product.productName + "\tR" + product.productPrice);
                 sum += product.productPrice;
             }
             Console.WriteLine(
-                "+++++++++++++++++++++++++" + "\n" +
+                "+++++++++++++++++++++++++" + "\n" +//displaying the total in an easy to read way
                 "Your Total Amount R{0}" + "\n" +
                 "+++++++++++++++++++++++++", Math.Round(sum, 2));
             cart.Clear();
