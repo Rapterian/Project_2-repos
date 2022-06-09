@@ -27,10 +27,7 @@ namespace FastFoodRestaurantMenu
                                          //the last option to something like back
         }
 
-        public void addItem(string item)
-        {
-            items.Add(item);
-        }
+        
 
         public void displayMenu()
         {
