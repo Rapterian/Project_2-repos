@@ -79,5 +79,18 @@ namespace FastFoodRestaurantMenu
             return mainMenu;
 
         }
+
+        static Menu createBreakfastMenu()//this allows us to use this  
+        {                                //menu in a switch statement
+            {
+            Menu breakfastMenu = new Menu(
+                "---------" + "\n" +
+                "Breakfast" + "\n" +
+                "---------");
+
+            breakfastMenu.addItem("All Day Brekkies");
+            breakfastMenu.addItem("Toasted Sandwiches");
+            return breakfastMenu;
+        }
     }
 }
