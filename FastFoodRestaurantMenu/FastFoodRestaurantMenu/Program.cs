@@ -414,6 +414,63 @@ namespace FastFoodRestaurantMenu
             return orderAgain;
         }
 
+        static Menu createFrozenLemonadesMenu()
+        {
+            Menu frozenLemonadesMenu = new Menu(
+            "Frozen Lemondes" + "\n" +
+
+
+
+            "------------------", "Back");
+
+
+
+            frozenLemonadesMenu.addItem("PassionFruit");
+            frozenLemonadesMenu.addItem("PassionFruitJug");
+            frozenLemonadesMenu.addItem("Naartjie");
+            frozenLemonadesMenu.addItem("NaartjieJug");
+            return frozenLemonadesMenu;
+        }
+
+
+
+        static bool addFrozenLemonadesItemToCart(int choice)
+        {
+            bool orderAgain = true;
+            switch ((FrozenLemonadesMenu)choice)
+            {
+                case FrozenLemonadesMenu.PassionFruit:
+                    cart.Add(new Product("Passion Fruit Lemonade", 39.90));
+                    createFrozenLemonadesMenu();
+                    break;
+
+
+
+                case FrozenLemonadesMenu.PassionFruitJug:
+                    cart.Add(new Product("Passion Fruit Lemonade Jug", 94.90));
+                    createFrozenLemonadesMenu();
+                    break;
+
+
+
+                case FrozenLemonadesMenu.Naartjie:
+                    cart.Add(new Product("Naartjie Lemonade", 39.90));
+                    createFrozenLemonadesMenu();
+                    break;
+
+
+
+                case FrozenLemonadesMenu.NaartjieJug:
+                    cart.Add(new Product("Naartjie Lemonade Jug", 94.90));
+                    createFrozenLemonadesMenu();
+                    break;
+                default:
+                    orderAgain = false;
+                    break;
+            }
+            return orderAgain;
+        }
+
 
         static void checkOut()
         {
