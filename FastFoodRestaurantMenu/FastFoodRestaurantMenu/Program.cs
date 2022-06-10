@@ -77,7 +77,7 @@ namespace FastFoodRestaurantMenu
                         Menu breakfastMenu = createBreakfastMenu();
                         breakfastMenu.displayMenu();
                         choise = breakfastMenu.getReply() - 1;
-                          
+
                         switch ((BreakfastMenu)choise)      //Having nested switch statements allows us to easily
                         {                                   //move through menus and submenus
                             case BreakfastMenu.AllDayBrekkies:
@@ -361,12 +361,7 @@ namespace FastFoodRestaurantMenu
         {
             Menu famousGrillsMenu = new Menu(
             "Famous Grills" + "\n" +
-
-
-
             "------------------", "Back");
-
-
 
             famousGrillsMenu.addItem("ChickenAndChips");
             famousGrillsMenu.addItem("GrilledChickenFillets");
@@ -418,12 +413,7 @@ namespace FastFoodRestaurantMenu
         {
             Menu frozenLemonadesMenu = new Menu(
             "Frozen Lemondes" + "\n" +
-
-
-
             "------------------", "Back");
-
-
 
             frozenLemonadesMenu.addItem("PassionFruit");
             frozenLemonadesMenu.addItem("PassionFruitJug");
@@ -475,12 +465,7 @@ namespace FastFoodRestaurantMenu
         {
             Menu milkshakeMenu = new Menu(
             "Milkshake" + "\n" +
-
-
-
             "------------------", "Back");
-
-
 
             milkshakeMenu.addItem("Classic");
             milkshakeMenu.addItem("BarOne");
@@ -527,6 +512,47 @@ namespace FastFoodRestaurantMenu
             }
             return orderAgain;
         }
+
+
+        static Menu createHotDrinksMenu()
+        {
+            Menu hotDrinksMenu = new Menu(
+            "Hot Drinks" + "\n" +
+            "------------------", "Back"); hotDrinksMenu.addItem("Cappachino");
+            hotDrinksMenu.addItem("HotChocolate");
+            hotDrinksMenu.addItem("Coffee");
+            hotDrinksMenu.addItem("Tea");
+            return hotDrinksMenu;
+        }
+        static bool addHotDrinksItemToCart(int choice)
+        {
+            bool orderAgain = true;
+            switch ((HotDrinksMenu)choice)
+            {
+                case HotDrinksMenu.Cappachino:
+                    cart.Add(new Product("Cappachino", 34.90));
+                    createHotDrinksMenu();
+                    break;
+                case HotDrinksMenu.HotChocolate:
+                    cart.Add(new Product("Hot Chocolate", 42.90));
+                    createHotDrinksMenu();
+                    break;
+                case HotDrinksMenu.Coffee:
+                    cart.Add(new Product("Coffee", 24.90));
+                    createHotDrinksMenu();
+                    break;
+                case HotDrinksMenu.Tea:
+                    cart.Add(new Product("Tea", 21.90));
+                    createHotDrinksMenu();
+                    break;
+                default:
+                    orderAgain = false;
+                    break;
+            }
+            return orderAgain;
+        }
+
+
 
         static void checkOut()
         {
