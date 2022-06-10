@@ -357,6 +357,62 @@ namespace FastFoodRestaurantMenu
             return orderAgain;
         }
 
+        static Menu createFamousGrillsMenu()
+        {
+            Menu famousGrillsMenu = new Menu(
+            "Famous Grills" + "\n" +
+
+
+
+            "------------------", "Back");
+
+
+
+            famousGrillsMenu.addItem("ChickenAndChips");
+            famousGrillsMenu.addItem("GrilledChickenFillets");
+            famousGrillsMenu.addItem("ThrillOfTheGrill");
+            famousGrillsMenu.addItem("ChickenWings");
+            return famousGrillsMenu;
+        }
+
+
+
+        static bool addFamousGrillsItemToCart(int choice)
+        {
+            bool orderAgain = true;
+            switch ((FamousGrillsMenu)choice)
+            {
+                case FamousGrillsMenu.ChickenAndChips:
+                    cart.Add(new Product("Chicken And Chips", 56.90));
+                    createFamousGrillsMenu();
+                    break;
+
+
+
+                case FamousGrillsMenu.GrilledChickenFillets:
+                    cart.Add(new Product("Grilled Chicken Fillets", 74.90));
+                    createFamousGrillsMenu();
+                    break;
+
+
+
+                case FamousGrillsMenu.ThrillOfTheGrill:
+                    cart.Add(new Product("Thrill Of The Grill", 79.90));
+                    createFamousGrillsMenu();
+                    break;
+
+
+
+                case FamousGrillsMenu.ChickenWings:
+                    cart.Add(new Product("Chicken Wings", 109.90));
+                    createFamousGrillsMenu();
+                    break;
+                default:
+                    orderAgain = false;
+                    break;
+            }
+            return orderAgain;
+        }
 
 
         static void checkOut()
