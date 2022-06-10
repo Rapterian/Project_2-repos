@@ -274,22 +274,27 @@ namespace FastFoodRestaurantMenu
             {
                 case ToastedSandwichesMenu.Cheese:
                     cart.Add(new Product("Cheese", 34.90));
+                    Console.WriteLine("Cheese added to order");
                     createBreakfastMenu();
                     break;
                 case ToastedSandwichesMenu.CheeseAndTomato:
                     cart.Add(new Product("Cheese And Tomato", 42.90));
+                    Console.WriteLine("Cheese And Tomato added to order");
                     createBreakfastMenu();
                     break;
                 case ToastedSandwichesMenu.ChickenMayo:
                     cart.Add(new Product("Chicken Mayo", 49.90));
+                    Console.WriteLine("Chicken Mayo added to order");
                     createBreakfastMenu();
                     break;
                 case ToastedSandwichesMenu.BaconAndEgg:
                     cart.Add(new Product("Bacon And Egg", 59.90));
+                    Console.WriteLine("Bacon And Egg added to order");
                     createBreakfastMenu();
                     break;
                 case ToastedSandwichesMenu.Dagwood:
                     cart.Add(new Product("Dagwood", 64.90));
+                    Console.WriteLine("Dagwood added to order");
                     createBreakfastMenu();
                     break;
                 default:
@@ -322,6 +327,7 @@ namespace FastFoodRestaurantMenu
             {
                 case BurgerMenu.Wimpy:
                     cart.Add(new Product("Wimpy", 59.90));
+                    Console.WriteLine("Wimpy added to order");
                     createBurgerMenu();
                     break;
 
@@ -329,6 +335,7 @@ namespace FastFoodRestaurantMenu
 
                 case BurgerMenu.Cheese:
                     cart.Add(new Product("Cheese", 69.90));
+                    Console.WriteLine("Omelette added to order");
                     createBurgerMenu();
                     break;
 
@@ -336,6 +343,7 @@ namespace FastFoodRestaurantMenu
 
                 case BurgerMenu.Chicken:
                     cart.Add(new Product("Chicken", 69.90));
+                    Console.WriteLine("Chicken added to order");
                     createBurgerMenu();
                     break;
 
@@ -343,6 +351,7 @@ namespace FastFoodRestaurantMenu
 
                 case BurgerMenu.Champion:
                     cart.Add(new Product("Champion", 89.90));
+                    Console.WriteLine("Champion added to order");
                     createBurgerMenu();
                     break;
                 default:
@@ -377,6 +386,7 @@ namespace FastFoodRestaurantMenu
             {
                 case FamousGrillsMenu.ChickenAndChips:
                     cart.Add(new Product("Chicken And Chips", 56.90));
+                    Console.WriteLine("Chicken And Chips added to order");
                     createFamousGrillsMenu();
                     break;
 
@@ -384,6 +394,7 @@ namespace FastFoodRestaurantMenu
 
                 case FamousGrillsMenu.GrilledChickenFillets:
                     cart.Add(new Product("Grilled Chicken Fillets", 74.90));
+                    Console.WriteLine("Grilled Chicken Fillets added to order");
                     createFamousGrillsMenu();
                     break;
 
@@ -391,6 +402,7 @@ namespace FastFoodRestaurantMenu
 
                 case FamousGrillsMenu.ThrillOfTheGrill:
                     cart.Add(new Product("Thrill Of The Grill", 79.90));
+                    Console.WriteLine("Thrill Of The Grill added to order");
                     createFamousGrillsMenu();
                     break;
 
@@ -398,6 +410,7 @@ namespace FastFoodRestaurantMenu
 
                 case FamousGrillsMenu.ChickenWings:
                     cart.Add(new Product("Chicken Wings", 109.90));
+                    Console.WriteLine("Chicken Wings added to order");
                     createFamousGrillsMenu();
                     break;
                 default:
@@ -429,6 +442,7 @@ namespace FastFoodRestaurantMenu
             {
                 case FrozenLemonadesMenu.PassionFruit:
                     cart.Add(new Product("Passion Fruit Lemonade", 39.90));
+                    Console.WriteLine("Passion Fruit added to order");
                     createFrozenLemonadesMenu();
                     break;
 
@@ -436,6 +450,7 @@ namespace FastFoodRestaurantMenu
 
                 case FrozenLemonadesMenu.PassionFruitJug:
                     cart.Add(new Product("Passion Fruit Lemonade Jug", 94.90));
+                    Console.WriteLine("Passion Fruit Jug added to order");
                     createFrozenLemonadesMenu();
                     break;
 
@@ -443,6 +458,7 @@ namespace FastFoodRestaurantMenu
 
                 case FrozenLemonadesMenu.Naartjie:
                     cart.Add(new Product("Naartjie Lemonade", 39.90));
+                    Console.WriteLine("Naartjie added to order");
                     createFrozenLemonadesMenu();
                     break;
 
@@ -450,6 +466,7 @@ namespace FastFoodRestaurantMenu
 
                 case FrozenLemonadesMenu.NaartjieJug:
                     cart.Add(new Product("Naartjie Lemonade Jug", 94.90));
+                    Console.WriteLine("Naartjie Jug added to order");
                     createFrozenLemonadesMenu();
                     break;
                 default:
@@ -481,6 +498,7 @@ namespace FastFoodRestaurantMenu
             {
                 case MilkshakeMenu.Classic:
                     cart.Add(new Product("Classic", 39.90));
+                    Console.WriteLine("Classic added to order");
                     createMilkshakeMenu();
                     break;
 
@@ -488,6 +506,7 @@ namespace FastFoodRestaurantMenu
 
                 case MilkshakeMenu.BarOne:
                     cart.Add(new Product("Bar One", 49.90));
+                    Console.WriteLine("Bar One added to order");
                     createMilkshakeMenu();
                     break;
 
@@ -495,6 +514,7 @@ namespace FastFoodRestaurantMenu
 
                 case MilkshakeMenu.MilkTart:
                     cart.Add(new Product("Milk Tart", 49.90));
+                    Console.WriteLine("Milk Tart added to order");
                     createMilkshakeMenu();
                     break;
 
@@ -502,6 +522,7 @@ namespace FastFoodRestaurantMenu
 
                 case MilkshakeMenu.ToffeMocha:
                     cart.Add(new Product("Toffe Mocha", 49.90));
+                    Console.WriteLine("Toffe Mocha added to order");
                     createMilkshakeMenu();
                     break;
                 default:
@@ -529,18 +550,22 @@ namespace FastFoodRestaurantMenu
             {
                 case HotDrinksMenu.Cappachino:
                     cart.Add(new Product("Cappachino", 34.90));
+                    Console.WriteLine("Cappachino added to order");
                     createHotDrinksMenu();
                     break;
                 case HotDrinksMenu.HotChocolate:
                     cart.Add(new Product("Hot Chocolate", 42.90));
+                    Console.WriteLine("Hot Chocolate added to order");
                     createHotDrinksMenu();
                     break;
                 case HotDrinksMenu.Coffee:
                     cart.Add(new Product("Coffee", 24.90));
+                    Console.WriteLine("Coffee added to order");
                     createHotDrinksMenu();
                     break;
                 case HotDrinksMenu.Tea:
                     cart.Add(new Product("Tea", 21.90));
+                    Console.WriteLine("Tea added to order");
                     createHotDrinksMenu();
                     break;
                 default:
