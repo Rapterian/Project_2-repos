@@ -471,6 +471,62 @@ namespace FastFoodRestaurantMenu
             return orderAgain;
         }
 
+        static Menu createMilkshakeMenu()
+        {
+            Menu milkshakeMenu = new Menu(
+            "Milkshake" + "\n" +
+
+
+
+            "------------------", "Back");
+
+
+
+            milkshakeMenu.addItem("Classic");
+            milkshakeMenu.addItem("BarOne");
+            milkshakeMenu.addItem("MilkTart");
+            milkshakeMenu.addItem("ToffeMocha");
+            return milkshakeMenu;
+        }
+
+
+
+        static bool addMilkshakeItemToCart(int choice)
+        {
+            bool orderAgain = true;
+            switch ((MilkshakeMenu)choice)
+            {
+                case MilkshakeMenu.Classic:
+                    cart.Add(new Product("Classic", 39.90));
+                    createMilkshakeMenu();
+                    break;
+
+
+
+                case MilkshakeMenu.BarOne:
+                    cart.Add(new Product("Bar One", 49.90));
+                    createMilkshakeMenu();
+                    break;
+
+
+
+                case MilkshakeMenu.MilkTart:
+                    cart.Add(new Product("Milk Tart", 49.90));
+                    createMilkshakeMenu();
+                    break;
+
+
+
+                case MilkshakeMenu.ToffeMocha:
+                    cart.Add(new Product("Toffe Mocha", 49.90));
+                    createMilkshakeMenu();
+                    break;
+                default:
+                    orderAgain = false;
+                    break;
+            }
+            return orderAgain;
+        }
 
         static void checkOut()
         {
