@@ -302,6 +302,61 @@ namespace FastFoodRestaurantMenu
             return OrderAgain;
         }
 
+        static Menu createBurgerMenu()
+        {
+            Menu burgerMenu = new Menu(
+            "Burgers" + "\n" +
+            "------------------", "Back");
+
+            burgerMenu.addItem("Wimpy");
+            burgerMenu.addItem("Cheese");
+            burgerMenu.addItem("Chicken");
+            burgerMenu.addItem("Champion");
+            return burgerMenu;
+        }
+
+
+
+        static bool addBurgerItemToCart(int choice)
+        {
+            bool orderAgain = true;
+            switch ((BurgerMenu)choice)
+            {
+                case BurgerMenu.Wimpy:
+                    cart.Add(new Product("Wimpy", 59.90));
+                    createBurgerMenu();
+                    break;
+
+
+
+                case BurgerMenu.Cheese:
+                    cart.Add(new Product("Cheese", 69.90));
+                    createBurgerMenu();
+                    break;
+
+
+
+                case BurgerMenu.Chicken:
+                    cart.Add(new Product("Chicken", 69.90));
+                    createBurgerMenu();
+                    break;
+
+
+
+                case BurgerMenu.Champion:
+                    cart.Add(new Product("Champion", 89.90));
+                    createBurgerMenu();
+                    break;
+                default:
+                    orderAgain = false;
+                    break;
+
+
+
+            }
+            return orderAgain;
+        }
+
 
 
         static void checkOut()
