@@ -103,60 +103,60 @@ namespace FastFoodRestaurantMenu
 
                     case MainMenu.Lunch:
 
-                        //switch ((LunchMenu)choise)        //Having nested switch statements allows us to easily
-                        //{                                 //move through menus and submenus  
-                        //    case LunchMenu.Burgers:
-                        //        Menu burgerMenu = createBurgerMenu();
-                        //        burgerMenu.displayMenu();
-                        //        do    //this loop will allow the user to get multiple items on the menu instead of 
-                        //        {     //cycling throug all the menus and submenus just to get at the sam place
-                        //            choise = burgerMenu.getReply() - 1;
-                        //        } while (addBurgerItemToCart(choise));
-                        //        break;
+                        switch ((LunchMenu)choise)        //Having nested switch statements allows us to easily
+                        {                                 //move through menus and submenus  
+                            case LunchMenu.Burgers:
+                                Menu burgerMenu = createBurgerMenu();
+                                burgerMenu.displayMenu();
+                                do    //this loop will allow the user to get multiple items on the menu instead of 
+                                {     //cycling throug all the menus and submenus just to get at the sam place
+                                    choise = burgerMenu.getReply() - 1;
+                                } while (addBurgerItemToCart(choise));
+                                break;
 
-                        //    case LunchMenu.FamousGrills:
-                        //        Menu famousGrillsMenu = createFamousGrillsMenu();
-                        //        famousGrillsMenu.displayMenu();
-                        //        do    //this loop will allow the user to get multiple items on the menu instead of 
-                        //        {     //cycling throug all the menus and submenus just to get at the sam place
-                        //            choise = famousGrillsMenu.getReply() - 1;
-                        //        } while (addFamousGrillsItemToCart(choise));
-                        //        break;
-                        //}
+                            case LunchMenu.FamousGrills:
+                                Menu famousGrillsMenu = createFamousGrillsMenu();
+                                famousGrillsMenu.displayMenu();
+                                do    //this loop will allow the user to get multiple items on the menu instead of 
+                                {     //cycling throug all the menus and submenus just to get at the sam place
+                                    choise = famousGrillsMenu.getReply() - 1;
+                                } while (addFamousGrillsItemToCart(choise));
+                                break;
+                        }
 
                         break;
 
                     case MainMenu.Drinks:
 
-                        //switch ((DrinksMenu)choise)   //Having nested switch statements allows us to easily
-                        //{                             //move through menus and submenus
-                        //    case DrinksMenu.FrozenLemonades:
-                        //        Menu frozenLemonades = createFrozenLemonadesMenu();
-                        //        frozenLemonades.displayMenu();
-                        //        do    //this loop will allow the user to get multiple items on the menu instead of 
-                        //        {     //cycling throug all the menus and submenus just to get at the sam place
-                        //            choise = frozenLemonades.getReply() - 1;
-                        //        } while (addFrozenLemonadesItemToCart(choise));
-                        //        break;
+                        switch ((DrinksMenu)choise)   //Having nested switch statements allows us to easily
+                        {                             //move through menus and submenus
+                            case DrinksMenu.FrozenLemonades:
+                                Menu frozenLemonades = createFrozenLemonadesMenu();
+                                frozenLemonades.displayMenu();
+                                do    //this loop will allow the user to get multiple items on the menu instead of 
+                                {     //cycling throug all the menus and submenus just to get at the sam place
+                                    choise = frozenLemonades.getReply() - 1;
+                                } while (addFrozenLemonadesItemToCart(choise));
+                                break;
 
-                        //    case DrinksMenu.Milkshake:
-                        //        Menu milkshakeMenu = createMilkshakeMenu();
-                        //        milkshakeMenu.displayMenu();
-                        //        do    //this loop will allow the user to get multiple items on the menu instead of 
-                        //        {     //cycling throug all the menus and submenus just to get at the sam place
-                        //            choise = milkshakeMenu.getReply() - 1;
-                        //        } while (addMilkshakeItemToCart(choise));
-                        //        break;
+                            case DrinksMenu.Milkshake:
+                                Menu milkshakeMenu = createMilkshakeMenu();
+                                milkshakeMenu.displayMenu();
+                                do    //this loop will allow the user to get multiple items on the menu instead of 
+                                {     //cycling throug all the menus and submenus just to get at the sam place
+                                    choise = milkshakeMenu.getReply() - 1;
+                                } while (addMilkshakeItemToCart(choise));
+                                break;
 
-                        //    case DrinksMenu.HotDrinks:
-                        //        Menu hotDrinksMenu = createHotDrinksMenu();
-                        //        hotDrinksMenu.displayMenu();
-                        //        do    //this loop will allow the user to get multiple items on the menu instead of 
-                        //        {     //cycling throug all the menus and submenus just to get at the sam place
-                        //            choise = hotDrinksMenu.getReply() - 1;
-                        //        } while (addHotDrinksItemToCart(choise));
-                        //        break;
-                        //}
+                            case DrinksMenu.HotDrinks:
+                                Menu hotDrinksMenu = createHotDrinksMenu();
+                                hotDrinksMenu.displayMenu();
+                                do    //this loop will allow the user to get multiple items on the menu instead of 
+                                {     //cycling throug all the menus and submenus just to get at the sam place
+                                    choise = hotDrinksMenu.getReply() - 1;
+                                } while (addHotDrinksItemToCart(choise));
+                                break;
+                        }
 
                         break;
 
@@ -201,8 +201,6 @@ namespace FastFoodRestaurantMenu
             {
                 Menu allDayBrekkiesMenu = new Menu(
                     "All Day Brekkies" + "\n" +
-
-
                     "----------------", "Back");
 
                 allDayBrekkiesMenu.addItem("Mzansi Brekkie");
@@ -576,128 +574,3 @@ namespace FastFoodRestaurantMenu
 
 
 
-
-//        switch ((BurgerMenu)choise)
-//        {
-//            case BurgerMenu.Wimpy:
-//                cart.Add(new Product("Wimpy", 59.90));
-//                createLunchMenu();
-//                break;
-
-//            case BurgerMenu.Cheese:
-//                cart.Add(new Product("Cheese", 69.90));
-//                createLunchMenu();
-//                break;
-
-//            case BurgerMenu.Chicken:
-//                cart.Add(new Product("Chicken", 69.90));
-//                createLunchMenu();
-//                break;
-
-//            case BurgerMenu.Champion:
-//                cart.Add(new Product("Champion", 89.90));
-//                createLunchMenu();
-//                break;
-
-//        }
-
-
-//        switch ((FamousGrillsMenu)choise)
-//        {
-//            case FamousGrillsMenu.ChickenAndChips:
-//                cart.Add(new Product("Chicken And Chips", 56.90));
-//                createLunchMenu();
-//                break;
-
-//            case FamousGrillsMenu.GrilledChickenFillets:
-//                cart.Add(new Product("Grilled Chicken Fillets", 74.90));
-//                createLunchMenu();
-//                break;
-
-//            case FamousGrillsMenu.ThrillOfTheGrill:
-//                cart.Add(new Product("Thrill Of The Grill", 79.90));
-//                createLunchMenu();
-//                break;
-
-//            case FamousGrillsMenu.ChickenWings:
-//                cart.Add(new Product("Chicken Wings", 109.90));
-//                createLunchMenu();
-//                break;
-
-//        }
-
-
-
-//        switch ((FrozenLemonadesMenu)choise)
-//        {
-//            case FrozenLemonadesMenu.PassionFruit:
-//                cart.Add(new Product("Passion Fruit Lemonade", 39.90));
-//                createDrinksMenu();
-//                break;
-
-//            case FrozenLemonadesMenu.PassionFruitJug:
-//                cart.Add(new Product("Passion Fruit Lemonade Jug", 94.90));
-//                createDrinksMenu();
-//                break;
-
-//            case FrozenLemonadesMenu.Naartjie:
-//                cart.Add(new Product("Naartjie Lemonade", 39.90));
-//                createDrinksMenu();
-//                break;
-
-//            case FrozenLemonadesMenu.NaartjieJug:
-//                cart.Add(new Product("Naartjie Lemonade Jug", 94.90));
-//                createDrinksMenu();
-//                break;
-
-//        }
-
-
-//        switch ((MilkshakeMenu)choise)
-//        {
-//            case MilkshakeMenu.Classic:
-//                cart.Add(new Product("Classic", 39.90));
-//                createDrinksMenu();
-//                break;
-
-//            case MilkshakeMenu.BarOne:
-//                cart.Add(new Product("Bar One", 49.90));
-//                createDrinksMenu();
-//                break;
-
-//            case MilkshakeMenu.MilkTart:
-//                cart.Add(new Product("Milk Tart", 49.90));
-//                createDrinksMenu();
-//                break;
-
-//            case MilkshakeMenu.ToffeMocha:
-//                cart.Add(new Product("Toffe Mocha", 49.90));
-//                createDrinksMenu();
-//                break;
-
-//        }
-
-
-//        switch ((HotDrinksMenu)choise)
-//        {
-//            case HotDrinksMenu.Cappachino:
-//                cart.Add(new Product("Cappachino", 34.90));
-//                createDrinksMenu();
-//                break;
-
-//            case HotDrinksMenu.HotChocolate:
-//                cart.Add(new Product("Hot Chocolate", 42.90));
-//                createDrinksMenu();
-//                break;
-
-//            case HotDrinksMenu.Coffee:
-//                cart.Add(new Product("Coffee", 24.90));
-//                createDrinksMenu();
-//                break;
-
-//            case HotDrinksMenu.Tea:
-//                cart.Add(new Product("Tea", 21.90));
-//                createDrinksMenu();
-//                break;
-
-//        }
